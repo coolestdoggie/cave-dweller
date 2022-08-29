@@ -13,6 +13,12 @@ namespace CaveDweller.Enemy
         private float xMax;
         private float move;
 
+        public void Flip()
+        {
+            side = side == Sides.Left ? Sides.Right : Sides.Left;
+            FlipSprite();
+        }
+        
         public void Move()
         {
             move = speed * (int)side * Time.deltaTime;
@@ -38,14 +44,14 @@ namespace CaveDweller.Enemy
         {
             if (move > 0 && side == Sides.Left)
             {
-                Flip();
+                FlipScale();
             }
             else if (move < 0 && side == Sides.Right)
             {
-                Flip();
+                FlipScale();
             }
         
-            void Flip()
+            void FlipScale()
             {
                 Vector3 newScale = transform.localScale;
                 newScale.x *= -1;

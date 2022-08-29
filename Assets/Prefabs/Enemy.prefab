@@ -188,5 +188,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef0c30fcbaf56e34e91be4d73f72b331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 3
-  jumpForce: 200
+  attackRange: 5
+  jumpForce: 500
