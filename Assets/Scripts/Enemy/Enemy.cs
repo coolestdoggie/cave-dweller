@@ -1,4 +1,4 @@
-using System;
+using CaveDweller.Helpers;
 using UnityEngine;
 
 namespace CaveDweller.Enemy
@@ -7,6 +7,8 @@ namespace CaveDweller.Enemy
     {
         [SerializeField] private SideToSideMovement sideToSideMovement;
         [SerializeField] private JumpingAttack jumpingAttack;
+        [SerializeField] private GroundChecker groundChecker;
+        [Header("Components")]
         [SerializeField] private Rigidbody2D rb2d;
         
         private void Start()
@@ -32,12 +34,20 @@ namespace CaveDweller.Enemy
 
         private void FixedUpdate()
         {
-            jumpingAttack.CheckForAttack();
+            AttackProcess();
         }
 
         private void Move()
         {
             sideToSideMovement.Move();
+        }
+
+        private void AttackProcess()
+        {
+            if (groundChecker.IsGrounded())
+            {
+                jumpingAttack.CheckForAttack();
+            }
         }
     }
 }

@@ -35,7 +35,7 @@ namespace CaveDweller
                 return;
             }
             
-            rb2d.AddForce(new Vector3(0, jumpForce));    
+            rb2d.velocity = Vector2.up * jumpForce;
         }
 
         private void OnCollisionEnter2D(Collision2D other)
