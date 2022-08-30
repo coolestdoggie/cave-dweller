@@ -14,6 +14,8 @@ namespace CaveDweller.UI
         public void Init(Health playerHealth)
         {
             this.playerHealth = playerHealth;
+            
+            DrawHearts();
         }
         
         private void DrawHearts()
@@ -27,12 +29,20 @@ namespace CaveDweller.UI
             {
                 CreateEmptyHeart();
             }
+
+            for (int i = 0; i < uiHearts.Count; i++)
+            {
+                int heartStatus = (int) Mathf.Clamp(playerHealth.CurrentHealth - (i * 2),
+                    (int) HeartStatus.Empty, (int) HeartStatus.Full);
+                
+                uiHearts[i].SetHeartStatus((HeartStatus)heartStatus);
+            }
         }
         
         private void CreateEmptyHeart()
         {
             GameObject newHeart = Instantiate(heartPrefab);
-            newHeart.transform.SetParent(transform);
+            newHeart.transform.SetParent(transform, false);
             
             UIHeart uiHeart = newHeart.GetComponent<UIHeart>();
             uiHeart.SetHeartStatus(HeartStatus.Empty);

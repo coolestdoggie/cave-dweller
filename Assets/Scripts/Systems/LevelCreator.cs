@@ -24,6 +24,9 @@ namespace CaveDweller.Systems
         {
             SpawnLocation();
             SpawnCharacters();
+            
+            playerInstance.Init();
+            enemyInstance.Init(playerInstance);
             mainCanvas.Init(playerInstance.Health);
         }
         

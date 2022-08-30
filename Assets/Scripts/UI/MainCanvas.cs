@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using CaveDweller.Common;
-using CaveDweller.Player;
 using UnityEngine;
 
 namespace CaveDweller

@@ -7,9 +7,10 @@ namespace CaveDweller.Player
     {
         [field: SerializeField] public Health Health { get; private set; }
 
-        private void Start()
+        public void Init()
         {
             Health.Init();
         }
+        
     }
 }

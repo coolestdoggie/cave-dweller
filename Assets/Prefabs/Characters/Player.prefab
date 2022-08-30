@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2703715109838119136}
   - component: {fileID: 7002050469931527709}
+  - component: {fileID: 8096107100927787691}
   - component: {fileID: 938888946624597502}
   - component: {fileID: 1010389319541388135}
-  - component: {fileID: 8096107100927787691}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -87,6 +87,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &8096107100927787691
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8442679413205354274}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 2.9375, y: 2.75}
+    newSize: {x: 2.9375, y: 2.75}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.14046204, y: 2.7349658}
+      - {x: -1.1997771, y: 1.3362327}
+      - {x: -1.46875, y: 0}
+      - {x: 0.9038869, y: 0.007911205}
+      - {x: 0.94662637, y: 1.1597946}
+      - {x: 1.4770505, y: 1.5902984}
+      - {x: 1.0257361, y: 2.721507}
 --- !u!50 &938888946624597502
 Rigidbody2D:
   serializedVersion: 4
@@ -121,36 +153,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Health>k__BackingField:
-    <MaxHealth>k__BackingField: 0
---- !u!60 &8096107100927787691
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8442679413205354274}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2.9375, y: 2.75}
-    newSize: {x: 2.9375, y: 2.75}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.14046204, y: 2.7349658}
-      - {x: -1.1997771, y: 1.3362327}
-      - {x: -1.46875, y: 0}
-      - {x: 0.9038869, y: 0.007911205}
-      - {x: 0.94662637, y: 1.1597946}
-      - {x: 1.4770505, y: 1.5902984}
-      - {x: 1.0257361, y: 2.721507}
+    <MaxHealth>k__BackingField: 6

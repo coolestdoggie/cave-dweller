@@ -10,10 +10,9 @@ namespace CaveDweller.Enemy
         [SerializeField] private GroundChecker groundChecker;
         [Header("Components")]
         [SerializeField] private Rigidbody2D rb2d;
-        
-        private void Start()
+
+        public void Init(Player.Player player)
         {
-            var player = FindObjectOfType<Player.Player>();
             jumpingAttack.Init(player.transform, rb2d);
         }
 
