@@ -26,7 +26,7 @@ namespace CaveDweller
             {
                 return;
             }
-            
+
             float distanceBtwTargetAndAttacker = (target.position - transform.position).magnitude;
             if (distanceBtwTargetAndAttacker <= attackRange)
             {

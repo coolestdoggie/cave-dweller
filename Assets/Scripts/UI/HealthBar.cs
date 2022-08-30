@@ -38,15 +38,20 @@ namespace CaveDweller.UI
                 CreateEmptyHeart();
             }
 
+            SetHeartsStatuses();
+        }
+
+        private void SetHeartsStatuses()
+        {
             for (int i = 0; i < uiHearts.Count; i++)
             {
-                int heartStatus = (int) Mathf.Clamp(playerHealth.CurrentHealth - (i * 2),
+                int heartStatus = (int) Mathf.Clamp(playerHealth.CurrentHealth - (i * 2), 
                     (int) HeartStatus.Empty, (int) HeartStatus.Full);
-                
-                uiHearts[i].SetHeartStatus((HeartStatus)heartStatus);
+
+                uiHearts[i].SetHeartStatus((HeartStatus) heartStatus);
             }
         }
-        
+
         private void CreateEmptyHeart()
         {
             GameObject newHeart = Instantiate(heartPrefab);
