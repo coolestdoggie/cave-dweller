@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using CaveDweller.Common;
 using UnityEngine;
@@ -15,9 +16,16 @@ namespace CaveDweller.UI
         {
             this.playerHealth = playerHealth;
             
+            playerHealth.Damaged += DrawHearts;
+            
             DrawHearts();
         }
-        
+
+        private void OnDestroy()
+        {
+            playerHealth.Damaged -= DrawHearts;
+        }
+
         private void DrawHearts()
         {
             ClearHearts();

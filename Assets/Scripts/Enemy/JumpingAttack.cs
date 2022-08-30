@@ -5,9 +5,10 @@ namespace CaveDweller
 {
     public class JumpingAttack : MonoBehaviour
     {
+        [SerializeField] private float damage;
         [SerializeField] private float attackRange;
         [SerializeField] private float jumpForce;
-        
+
         private Transform target;
         private Rigidbody2D rb2d;
 
@@ -21,6 +22,11 @@ namespace CaveDweller
 
         public void CheckForAttack()
         {
+            if (!target.gameObject.activeSelf)
+            {
+                return;
+            }
+            
             float distanceBtwTargetAndAttacker = (target.position - transform.position).magnitude;
             if (distanceBtwTargetAndAttacker <= attackRange)
             {
@@ -30,18 +36,15 @@ namespace CaveDweller
 
         private void Attack()
         {
-            if (rb2d.velocity.y > Mathf.Epsilon)
-            {
-                return;
-            }
-            
             rb2d.velocity = Vector2.up * jumpForce;
         }
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.GetComponent<Player.Player>() == null) return;
-
+            var player = other.gameObject.GetComponent<Player.Player>();
+            if (player == null) return;
+            player.Health.GetDamage(damage);
+            
             OnCollidedWithPlayer();
         }
 
