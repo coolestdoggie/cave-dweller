@@ -1,4 +1,4 @@
-using CaveDweller.Helpers;
+using CaveDweller.Common;
 using UnityEngine;
 
 namespace CaveDweller.Enemy
@@ -13,7 +13,7 @@ namespace CaveDweller.Enemy
         
         private void Start()
         {
-            var player = FindObjectOfType<Player>();
+            var player = FindObjectOfType<Player.Player>();
             jumpingAttack.Init(player.transform, rb2d);
         }
 

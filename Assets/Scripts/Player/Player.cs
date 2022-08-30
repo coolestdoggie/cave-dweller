@@ -1,21 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
+using CaveDweller.Common;
 using UnityEngine;
 
-namespace CaveDweller
+namespace CaveDweller.Player
 {
     public class Player : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+        [field: SerializeField] public Health Health { get; private set; }
 
-        // Update is called once per frame
-        void Update()
+        private void Start()
         {
-        
+            Health.Init();
         }
     }
 }

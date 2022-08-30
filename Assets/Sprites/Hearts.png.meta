@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 50d874bf3ee91e7418e850d7374443ba
+guid: 329cfbb57d9260943937e5545ccec115
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -140,22 +140,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player
+      name: Hearts_0
       rect:
         serializedVersion: 2
-        x: 26
+        x: 0
         y: 0
-        width: 47
-        height: 44
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 165fd0c65059ddc44824c56a33301b35
-      internalID: -1607339409
+      spriteID: 3faace77100724940ab1a286f907eb5a
+      internalID: -784109063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hearts_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 878e42be2e1855548a040048c40513ff
+      internalID: 1215486494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hearts_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 531f2def894d5bd409387cc869806a3e
+      internalID: -1932282665
       vertices: []
       indices: 
       edges: []
@@ -171,7 +213,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player: -1607339409
+      Hearts_2: -1932282665
+      Hearts_0: -784109063
+      Hearts_1: 1215486494
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

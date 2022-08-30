@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 
-namespace CaveDweller.Helpers
+namespace CaveDweller.Common
 {
     public class GroundChecker : MonoBehaviour
     {
         [SerializeField] private Collider2D collider;
         [SerializeField] private LayerMask ground;
+        
         public bool IsGrounded()
         {
             RaycastHit2D raycastInfo = Physics2D.BoxCast(collider.bounds.center, collider.bounds.size,

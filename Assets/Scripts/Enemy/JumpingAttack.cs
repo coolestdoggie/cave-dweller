@@ -40,7 +40,7 @@ namespace CaveDweller
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.GetComponent<Player>() == null) return;
+            if (other.gameObject.GetComponent<Player.Player>() == null) return;
 
             OnCollidedWithPlayer();
         }

@@ -1,4 +1,4 @@
-﻿namespace CaveDweller.Helpers
+﻿namespace CaveDweller.Common
 {
     public enum Sides
     {

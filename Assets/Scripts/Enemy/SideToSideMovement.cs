@@ -1,4 +1,4 @@
-using CaveDweller.Helpers;
+using CaveDweller.Common;
 using UnityEngine;
 
 namespace CaveDweller.Enemy
