@@ -34,7 +34,7 @@ namespace CaveDweller.Enemy
 
         private void FixedUpdate()
         {
-            AttackProcess();
+            CheckForAttack();
         }
 
         private void Move()
@@ -42,7 +42,7 @@ namespace CaveDweller.Enemy
             sideToSideMovement.Move();
         }
 
-        private void AttackProcess()
+        private void CheckForAttack()
         {
             if (groundChecker.IsGrounded())
             {
